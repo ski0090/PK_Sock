@@ -80,7 +80,7 @@
     <OutDir>$(SolutionDir)Lib\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <OutDir>$(SolutionDir)Lib\</OutDir>
+    <OutDir>$(SolutionDir)Bin\</OutDir>
     <IncludePath>C:\Program Files\OpenSSL-Win64\include\;$(IncludePath)</IncludePath>
     <LibraryPath>C:\Program Files\OpenSSL-Win64\lib\VC\;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
@@ -116,6 +116,8 @@
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+      <ImportLibrary>$(ProjectDir)\Lib\$(TargetName)_64D.lib</ImportLibrary>
+      <OutputFile>$(OutDir)$(TargetName)_64D.dll</OutputFile>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -153,6 +155,8 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+      <ImportLibrary>$(ProjectDir)\Lib\$(TargetName)_64.lib</ImportLibrary>
+      <OutputFile>$(OutDir)$(TargetName)_64.dll</OutputFile>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
