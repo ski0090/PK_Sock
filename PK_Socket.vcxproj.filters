@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="99.Headers">
+      <UniqueIdentifier>{0d8aa57d-2f32-4d43-88f8-60285b46f9d6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="00.Utill">
+      <UniqueIdentifier>{4b8bd637-1f41-42ff-b93d-0b1c52074cc6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="00.Utill\StringUtil">
+      <UniqueIdentifier>{bdc92b68-51e8-47bb-9559-e4c6ead6d8a1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01.Components">
+      <UniqueIdentifier>{662189c2-49d3-4260-b613-dcb0f0be7d2b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01.Components\00.Address">
+      <UniqueIdentifier>{f1a2f8fa-10a5-4c01-9f04-3eda4d8a3be8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01.Components\00.Address\Address">
+      <UniqueIdentifier>{c7f340cb-564e-4ab1-96c3-e2a5f420de4b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01.Components\00.Address\AddressUtill">
+      <UniqueIdentifier>{82fe38a4-ffc6-4f11-8a2d-608cc53cbb81}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01.Components\01.Stream">
+      <UniqueIdentifier>{c041c94e-3ef4-41ee-ba51-0cf6c015385d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01.Components\01.Stream\Stream">
+      <UniqueIdentifier>{9804dc58-de64-464d-9cc1-4f07a1e53803}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01.Components\01.Stream\Stream\In">
+      <UniqueIdentifier>{8c2f8a82-3b50-4a44-97ad-008e499beb11}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01.Components\01.Stream\Stream\Out">
+      <UniqueIdentifier>{723de14d-7648-4333-9413-b9a163bc27e6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01.Components\03.OpenSSL">
+      <UniqueIdentifier>{a47f3919-ca95-4625-a1cd-b990a4195c55}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01.Components\02.Socket">
+      <UniqueIdentifier>{93d3d90e-35e0-4511-b2d8-5d15027ec2d1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01.Components\02.Socket\Socket">
+      <UniqueIdentifier>{4717952d-7048-4114-8fba-eb7986a82641}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01.Components\02.Socket\Socket\TCP">
+      <UniqueIdentifier>{05186c81-052b-44b5-bbf8-4299be7a862b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01.Components\02.Socket\Socket\UDP">
+      <UniqueIdentifier>{f1ad69ea-75b1-432e-9920-d61b947d0df7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01.Components\02.Socket\SocketUtill">
+      <UniqueIdentifier>{c074dc51-cf75-425b-88b1-85ce1c185d1a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01.Components\04.Critical Section">
+      <UniqueIdentifier>{20291d25-5a69-4c3c-aaac-328a9452f8f4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01.Components\03.OpenSSL\SSL">
+      <UniqueIdentifier>{7ac364e3-b656-4803-b8e5-ee3d9dbbc04b}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="SocketAddressFactory.cpp">
+      <Filter>01.Components\00.Address\AddressUtill</Filter>
+    </ClCompile>
+    <ClCompile Include="SocketAddress.cpp">
+      <Filter>01.Components\00.Address\Address</Filter>
+    </ClCompile>
+    <ClCompile Include="UDPSocket.cpp">
+      <Filter>01.Components\02.Socket\Socket\UDP</Filter>
+    </ClCompile>
+    <ClCompile Include="TCPSocket.cpp">
+      <Filter>01.Components\02.Socket\Socket\TCP</Filter>
+    </ClCompile>
+    <ClCompile Include="SocketUtil.cpp">
+      <Filter>01.Components\02.Socket\SocketUtill</Filter>
+    </ClCompile>
+    <ClCompile Include="StringUtils.cpp">
+      <Filter>00.Utill\StringUtil</Filter>
+    </ClCompile>
+    <ClCompile Include="BaseSocket.cpp">
+      <Filter>01.Components\02.Socket\Socket</Filter>
+    </ClCompile>
+    <ClCompile Include="CriticalSection.cpp">
+      <Filter>01.Components\04.Critical Section</Filter>
+    </ClCompile>
+    <ClCompile Include="MemoryStream.cpp">
+      <Filter>01.Components\01.Stream</Filter>
+    </ClCompile>
+    <ClCompile Include="InStream.cpp">
+      <Filter>01.Components\01.Stream\Stream\In</Filter>
+    </ClCompile>
+    <ClCompile Include="OutStream.cpp">
+      <Filter>01.Components\01.Stream\Stream\Out</Filter>
+    </ClCompile>
+    <ClCompile Include="SSL_Utill.cpp">
+      <Filter>01.Components\03.OpenSSL</Filter>
+    </ClCompile>
+    <ClCompile Include="TLS_Socket.cpp">
+      <Filter>01.Components\03.OpenSSL\SSL</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="LinkingContext.h">
+      <Filter>01.Components\01.Stream\Stream</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\StringUtils.h">
+      <Filter>00.Utill\StringUtil</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\SocketAddress.h">
+      <Filter>01.Components\00.Address\Address</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\SocketAddressFactory.h">
+      <Filter>01.Components\00.Address\AddressUtill</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\InStream.h">
+      <Filter>01.Components\01.Stream\Stream\In</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\OutStream.h">
+      <Filter>01.Components\01.Stream\Stream\Out</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\MemoryStream.h">
+      <Filter>01.Components\01.Stream</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\BaseSocket.h">
+      <Filter>01.Components\02.Socket\Socket</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\TCPSocket.h">
+      <Filter>01.Components\02.Socket\Socket\TCP</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\UDPSocket.h">
+      <Filter>01.Components\02.Socket\Socket\UDP</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\SSL_Utill.h">
+      <Filter>01.Components\03.OpenSSL</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\CriticalSection.h">
+      <Filter>01.Components\04.Critical Section</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\LinkingContext.h">
+      <Filter>01.Components\01.Stream\Stream</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\PK_Shared.h">
+      <Filter>99.Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\PK_Sock.h">
+      <Filter>99.Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\SocketUtil.h">
+      <Filter>01.Components\02.Socket\SocketUtill</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\TLS_Socket.h">
+      <Filter>01.Components\03.OpenSSL\SSL</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\PK_externs.h">
+      <Filter>99.Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\PK_Defines.h">
+      <Filter>99.Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\PK_ByteSwap.h">
+      <Filter>99.Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\PK_structs.h">
+      <Filter>99.Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\PK_typedef.h">
+      <Filter>99.Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\PK_Usings.h">
+      <Filter>99.Headers</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
