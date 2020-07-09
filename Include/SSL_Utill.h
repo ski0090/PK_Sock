@@ -1,4 +1,5 @@
 #pragma once
+#ifdef _USE_SSL
 using namespace std;
 class SOCK_DLL SSL_Utill
 {
@@ -53,3 +54,4 @@ SSL: SSL_CTX를 상속 하여 만들어짐
 		BIO(입출력 스트림):4계층의 TCP 연결을 다룸
 
 -----------------------------------------------------------------------------------------------*/
+#endif

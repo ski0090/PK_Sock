@@ -5,6 +5,7 @@
 #define SOCK_DLL _declspec(dllimport)
 #endif 
 
+#ifdef _USE_SSL
 #ifdef _DEBUG
 #pragma comment(lib,"libssl64MTd.lib")
 #pragma comment(lib,"libssl64MDd.lib")
@@ -16,5 +17,5 @@
 #pragma comment(lib,"libcrypto64MT.lib")
 #pragma comment(lib,"libcrypto64MD.lib")
 #endif
-
+#endif
 #include "PK_Shared.h"

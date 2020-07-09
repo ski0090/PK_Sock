@@ -3,6 +3,8 @@
 	openssl 라이브러리가 base이다.
 	TCPsocket 클래스의 컴포넌트로 활용한다.
 */
+#ifdef _USE_SSL
+
 class SOCK_DLL TLS_Socket
 	:BaseSocket
 {
@@ -26,3 +28,4 @@ private:
 
 };
 using TLS_SocketPtr = shared_ptr<TLS_Socket>;
+#endif

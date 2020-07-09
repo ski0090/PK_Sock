@@ -1,4 +1,6 @@
 #include "PK_Sock.h"
+#ifdef _USE_SSL
+
 #define  MATCHING_FAIL -1
 TLS_Socket::~TLS_Socket()
 {
@@ -135,3 +137,4 @@ TLS_Socket::TLS_Socket(SOCKET _socket, SSL* _ssl)
 {
 	SSL_set_fd(mSSL, mSocket);
 }
+#endif

@@ -42,11 +42,11 @@ const int SOCKET_ERROR = -1;
 #include <unordered_set>
 #include <cassert>
 #include <tchar.h>
-
+#ifdef _USE_SSL
 #include <openssl\ossl_typ.h>
 #include <openssl\ssl.h>
 #include <openssl\err.h>
-
+#endif
 //Headers
 #include "Usings.h"
 #include "defines.h"
@@ -58,15 +58,16 @@ const int SOCKET_ERROR = -1;
 #include "BaseSocket.h"
 #include "UDPSocket.h"
 #include "TCPSocket.h"
-#include "TLS_Socket.h"
 #include "LinkingContext.h"
 #include "MemoryStream.h"
 #include "InStream.h"
 #include "OutStream.h"
 
+#ifdef _USE_SSL
 #include <openssl\ossl_typ.h>
 #include <openssl\ssl.h>
-
+#include "TLS_Socket.h"
+#endif
 #include "SSL_Utill.h"
 //System
 #include "CriticalSection.h"

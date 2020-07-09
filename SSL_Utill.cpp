@@ -1,4 +1,6 @@
 //Secret
+#ifdef _USE_SSL
+
 #include "PK_Sock.h"
 #include <openssl\ossl_typ.h>
 #include <openssl\bio.h>
@@ -102,3 +104,4 @@ SSL_Utill::~SSL_Utill()
 	EVP_cleanup();
 }
 
+#endif
