@@ -48,10 +48,10 @@ const int SOCKET_ERROR = -1;
 #include <openssl\err.h>
 #endif
 //Headers
-#include "Usings.h"
-#include "defines.h"
-#include "ByteSwap.h"
-#include "structs.h"
+#include "PK_Usings.h"
+#include "PK_defines.h"
+#include "PK_ByteSwap.h"
+#include "PK_structs.h"
 
 //Network
 #include "SocketAddress.h"
@@ -71,8 +71,8 @@ const int SOCKET_ERROR = -1;
 #include "SSL_Utill.h"
 //System
 #include "CriticalSection.h"
-#include "typedef.h"
-#include "externs.h"
+#include "PK_typedef.h"
+#include "PK_externs.h"
 //Utilities
 #include "SocketUtil.h"
 #include "StringUtils.h"

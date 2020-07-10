@@ -71,16 +71,19 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <OutDir>$(ProjectDir)Lib\</OutDir>
-    <IncludePath>$(IncludePath)</IncludePath>
+    <IncludePath>$(ProjectDir)Include\;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <OutDir>$(SolutionDir)Lib\</OutDir>
+    <IncludePath>$(ProjectDir)Include\;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <OutDir>$(SolutionDir)Bin\</OutDir>
+    <IncludePath>$(ProjectDir)Include\;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <OutDir>$(SolutionDir)Lib\</OutDir>
+    <IncludePath>$(ProjectDir)Include\;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -105,6 +108,7 @@
       <ConformanceMode>true</ConformanceMode>
       <PreprocessorDefinitions>PK_SOCK_EXPORTS;_CRT_SECURE_NO_WARNINGS;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <AdditionalIncludeDirectories>$(ProjectDir)Include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -123,6 +127,7 @@
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
       <PreprocessorDefinitions>_WIN32_;PK_SOCK_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir)Include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -142,6 +147,7 @@
       <ConformanceMode>true</ConformanceMode>
       <PreprocessorDefinitions>PK_SOCK_EXPORTS;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <AdditionalIncludeDirectories>$(ProjectDir)Include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -169,28 +175,29 @@
     <ClCompile Include="UDPSocket.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="BaseSocket.h" />
-    <ClInclude Include="ByteSwap.h" />
-    <ClInclude Include="CriticalSection.h" />
-    <ClInclude Include="defines.h" />
-    <ClInclude Include="externs.h" />
-    <ClInclude Include="InStream.h" />
+    <ClInclude Include="Include\BaseSocket.h" />
+    <ClInclude Include="Include\PK_ByteSwap.h" />
+    <ClInclude Include="Include\CriticalSection.h" />
+    <ClInclude Include="Include\PK_Defines.h" />
+    <ClInclude Include="Include\PK_externs.h" />
+    <ClInclude Include="Include\InStream.h" />
+    <ClInclude Include="Include\LinkingContext.h" />
+    <ClInclude Include="Include\MemoryStream.h" />
+    <ClInclude Include="Include\OutStream.h" />
+    <ClInclude Include="Include\PK_Shared.h" />
+    <ClInclude Include="Include\PK_Sock.h" />
+    <ClInclude Include="Include\SocketAddress.h" />
+    <ClInclude Include="Include\SocketAddressFactory.h" />
+    <ClInclude Include="Include\SocketUtil.h" />
+    <ClInclude Include="Include\SSL_Utill.h" />
+    <ClInclude Include="Include\StringUtils.h" />
+    <ClInclude Include="Include\PK_structs.h" />
+    <ClInclude Include="Include\TCPSocket.h" />
+    <ClInclude Include="Include\TLS_Socket.h" />
+    <ClInclude Include="Include\PK_typedef.h" />
+    <ClInclude Include="Include\UDPSocket.h" />
+    <ClInclude Include="Include\PK_Usings.h" />
     <ClInclude Include="LinkingContext.h" />
-    <ClInclude Include="MemoryStream.h" />
-    <ClInclude Include="SSL_Utill.h" />
-    <ClInclude Include="OutStream.h" />
-    <ClInclude Include="PK_Shared.h" />
-    <ClInclude Include="SocketAddress.h" />
-    <ClInclude Include="SocketAddressFactory.h" />
-    <ClInclude Include="PK_Sock.h" />
-    <ClInclude Include="SocketUtil.h" />
-    <ClInclude Include="TLS_Socket.h" />
-    <ClInclude Include="StringUtils.h" />
-    <ClInclude Include="structs.h" />
-    <ClInclude Include="TCPSocket.h" />
-    <ClInclude Include="typedef.h" />
-    <ClInclude Include="UDPSocket.h" />
-    <ClInclude Include="Usings.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
